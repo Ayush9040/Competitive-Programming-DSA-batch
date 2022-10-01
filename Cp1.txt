@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    int p=x;
+    int d=0,fv=0,flag=0;
+
+    if(p<0 && flag==0)
+    {
+        printf("false");
+        flag=1;
+    }
+
+    while(x)
+    {
+        d=x%10;
+        fv=fv*10+d;
+        x=x/10;
+    }
+
+    if(p == fv && flag==0)
+    {
+        printf("true");
+        flag=1;
+    }
+
+    if(p != fv && flag==0)
+    {
+        printf("false");
+    }
+    return 0;
+}
